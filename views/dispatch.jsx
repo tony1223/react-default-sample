@@ -1,12 +1,12 @@
 
-var React = require('react');
+import React from "react";
 
 // <DefaultLayout title={this.props.title} name={this.props.name}>
 //       </DefaultLayout>
 
 
-var Dispatcher = React.createClass({
-  render: function() {
+export default class Dispatcher extends React.Component {
+  render() {
   	var comp = require("./"+this.props.comp+".jsx");
     var props = this.props.renders;
     if(props == null){
@@ -51,7 +51,4 @@ var Dispatcher = React.createClass({
       </DefaultLayout>
     );
   }
-});
-
-module.exports = Dispatcher;
-
+}
