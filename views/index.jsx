@@ -1,7 +1,7 @@
-var React = require('react');
+import React from "react";
 
-var HelloMessage = React.createClass({
-  render: function() {
+export default class Index extends React.Component {
+  render(){
   return (
       <div>
         <h1>Hello World</h1>
@@ -12,6 +12,5 @@ var HelloMessage = React.createClass({
       </div>
     );
   }
-});
+}
 
-module.exports = HelloMessage;
