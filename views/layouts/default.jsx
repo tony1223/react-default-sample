@@ -1,8 +1,10 @@
-var React = require('react');
-var util = require("../helpers/util");
+
+import React from 'react';
+import util  from "../helpers/util";
 var {asset_url} = util;
-var DefaultLayout = React.createClass({
-  render: function() {
+
+export default class DefaultLayout extends React.Component {
+  render() {
     return (
       <html>
         <head>
@@ -16,12 +18,11 @@ var DefaultLayout = React.createClass({
           <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 			    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
           <script src="https://fb.me/react-with-addons-0.13.3.min.js"></script>
-          <script src={"/resource/"+this.props.name+".js"} ></script>
+          <script src={"/resource/controller/"+this.props.name+".js"} ></script>
         </body>
       </html>
     );
 
   }
-});
+}
 
-module.exports = DefaultLayout;

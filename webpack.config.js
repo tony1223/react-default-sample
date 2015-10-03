@@ -39,7 +39,6 @@ views.forEach(function(v){
     entries[v.replace("views/","").replace(/\.js[x]?/,"")] = ["./"+v];
   }
 });
-entries["main.css"] = ["./public/css/main.scss"];
 
 
 function extsToRegExp(exts) {

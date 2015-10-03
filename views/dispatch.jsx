@@ -7,7 +7,7 @@ import React from "react";
 
 export default class Dispatcher extends React.Component {
   render() {
-  	var comp = require("./"+this.props.comp+".jsx");
+  	var comp = require("./controller/"+this.props.comp+".jsx");
     var props = this.props.renders;
     if(props == null){
       props = this.props.views;
@@ -21,7 +21,7 @@ export default class Dispatcher extends React.Component {
   	// }
 
     var render = function(comp,props,views){
-      var datas = JSON.stringify(views);
+      var datas = JSON.stringify(props);
       var childs = React.renderToString(React.createElement(comp,props)) +
         "<script> window._react_options = "+datas+" </script> ";
       return childs;

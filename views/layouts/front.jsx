@@ -1,12 +1,12 @@
-var React = require('react');
-var util = require("../helpers/util");
-var cx = require("classnames");
+import React from 'react';
+import util  from "../helpers/util";
+import cx    from "classnames";
 var {asset_url} = util;
 
-var BootStrapMenu = require("../components/bootStrapMenu.jsx");
+import BootStrapMenu from "../components/bootStrapMenu.jsx";
 
-var MemberLayout = React.createClass({
-  render: function() {
+export default class FrontLayout extends React.Component {
+  render() {
     var items = [
       { 
         key:"home",
@@ -55,12 +55,11 @@ var MemberLayout = React.createClass({
           <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 			    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
           <script src="https://fb.me/react-with-addons-0.13.3.min.js"></script>
-          <script src={"/resource/"+this.props.name+".js"} ></script>
+          <script src={"/resource/controller/"+this.props.name+".js"} ></script>
 
         </body>
       </html>
     );
   }
-});
+}
 
-module.exports = MemberLayout;
